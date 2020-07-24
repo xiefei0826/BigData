@@ -1,0 +1,6 @@
+
+
+1、hdfs 导入 数据 到hbase
+sudo -u hbase hbase org.apache.hadoop.hbase.mapreduce.ImportTsv -Dimporttsv.separator=" " -Dimporttsv.bulk.output=tmp -Dimporttsv.columns=a,b,c <tablename> <hdfs-inputdir>
+
+sudo -u hbase hbase org.apache.hadoop.hbase.mapreduce.LoadIncrementalHFiles /user/hbase/tmp music1
